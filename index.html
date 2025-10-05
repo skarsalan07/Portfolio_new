@@ -536,6 +536,60 @@
             transform: translateY(-3px);
         }
 
+        /* Work Status Badge */
+        .work-status-badge {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            background: var(--primary-light);
+            border: 2px solid var(--primary);
+            border-radius: 50px;
+            padding: 0.8rem 1.5rem;
+            margin-top: 2rem;
+            max-width: fit-content;
+            transition: var(--transition);
+        }
+
+        .work-status-badge:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 174, 255, 0.3);
+        }
+
+        .status-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: var(--accent);
+            animation: blink 2s infinite;
+            box-shadow: 0 0 10px var(--accent);
+        }
+
+        @keyframes blink {
+            0%, 50% {
+                opacity: 1;
+            }
+            51%, 100% {
+                opacity: 0.3;
+            }
+        }
+
+        .status-content {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .status-content i {
+            color: var(--primary);
+            font-size: 1.1rem;
+        }
+
+        .status-content span {
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
         /* --- About Section --- */
         #about {
             background: var(--bg-light);
@@ -1372,6 +1426,14 @@
                         <a href="mailto:skarsalan8983@gmail.com" aria-label="Email"><i
                                 class="fas fa-envelope"></i></a>
                     </div>
+                    <!-- Current Work Status Badge -->
+                    <div class="work-status-badge">
+                        <div class="status-dot"></div>
+                        <div class="status-content">
+                            <i class="fas fa-briefcase"></i>
+                            <span>Currently Working At Dictation Daddy</span>
+                        </div>
+                    </div>
                 </div>
                 <div class="hero-image-container">
                     <div class="hero-image-frame">
@@ -1424,6 +1486,14 @@
                         </div>
                         <div class="about-tab-content" id="experience">
                             <div class="timeline">
+                                <div class="timeline-item">
+                                    <span class="timeline-date">Sep 2025 - Present</span>
+                                    <h5>Software Engineer Intern (Remote) | Dictation Daddy</h5>
+                                    <p>• Fine-tuned OpenAI Whisper Large for domain-specific transcription, improving accuracy in production use cases.<br>
+                                    • Optimized inference pipeline, reducing latency by 40%+ (1s → 600ms) for near real-time response.<br>
+                                    • Deployed scalable APIs with monitoring, logging, and fault-tolerance for reliable integration.<br>
+                                    • Integrated Gemini 1.5 LLM to deliver adaptive text formatting (formal/informal) based on context.</p>
+                                </div>
                                 <div class="timeline-item">
                                     <span class="timeline-date">2023</span>
                                     <h5>Infosys Springboard Intern</h5>
@@ -1519,6 +1589,31 @@
                 </div>
                 <div class="projects-grid">
                     <!-- Project Cards -->
+                    <div class="project-card" data-category="gen-ai">
+                        <div class="project-image" ">
+                            <img src="Chatbot project.jpg" alt="Hybrid Chatbot Project">
+                            <span class="project-badge">Gen AI</span>
+                        </div>
+                        <div class="project-content">
+                            <h5>AI Hybrid Chatbot</h5>
+                            <p>A hybrid chatbot system combining knowledge base with LLM capabilities using Groq. Features React frontend, Flask backend, providing both fast responses from local knowledge base and AI-powered responses using llama-3.1-8b-instant.</p>
+                            <div class="project-tags">
+                                <span>React</span>
+                                <span>Flask</span>
+                                <span>Groq</span>
+                                <span>LLM</span>
+                                <span>Python</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/skarsalan07/Chatbot-hybrid" class="project-link outline" target="_blank">
+                                    <i class="fab fa-github"></i> Code
+                                </a>
+                                <a href="https://bucolic-maamoul-f98630.netlify.app/" class="project-link" target="_blank">
+                                    <i class="fas fa-eye"></i> Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                     <div class="project-card" data-category="nlp">
                         <div class="project-image">
                             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbMfsw2_7sycoxHbYuDxrscQP9ir37koIdIA&s"
